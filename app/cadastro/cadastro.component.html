@@ -1,0 +1,14 @@
+<div class="conteudo">
+  <form #formTarefa="ngForm">
+    <div class="form-group">
+      <label for="codigo">Código</label>
+      <input type="text" [(ngModel)]="tarefa.codigo" name="codigo" #name="ngModel" class="form-text text-muted" placeholder="Código da tarefa" [disabled]="true" required>
+    </div>
+    <div class="form-group">
+      <label for="descricao">Descrição</label>
+      <input type="text" [(ngModel)]="tarefa.descricao" name="descricao" #name="ngModel" class="form-text text-muted" placeholder="Digite a tarefa" size="60" required>
+    </div>
+    <button type="submit" name="salvar" (click)="salvar()" [disabled]="(!formTarefa.valid)" class="btn btn-success">Salvar</button>&nbsp;
+    <button type="reset" name="reset" class="btn btn-danger">Cancelar</button>
+  </form>
+</div>
